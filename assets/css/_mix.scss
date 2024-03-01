@@ -1,0 +1,88 @@
+@mixin tap-highlight-transparent {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    @content;
+}
+@mixin filter ($a, $b, $c, $d){
+    filter: drop-shadow($a $b $c $d);
+    -webkit-filter: drop-shadow($a $b $c $d);
+    @content;
+}
+@mixin box-shadow($x, $y, $z, $a){
+    box-shadow: ($x, $y, $z, $a);
+    @content;
+}
+@mixin border-radius($a){
+    border-radius: ($a);
+    -webkit-border-radius: ($a);
+    -moz-border-radius: ($a);
+    -ms-border-radius: ($a);
+    -o-border-radius: ($a);
+    @content;
+}
+@mixin transition($x){
+    transition: $x;
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+    @content;
+}
+@mixin scale($x){
+    transform: scale($x);
+    -webkit-transform: scale($x);
+    -moz-transform: scale($x);
+    -ms-transform: scale($x);
+    -o-transform: scale($x);
+    @content;
+}
+@mixin rotate($deg){
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    @content
+}
+@mixin user-select-none ($none){
+    -webkit-user-select: $none;
+    -moz-user-select: $none;
+    -ms-user-select: $none;
+    user-select: $none;
+    @content;
+}
+  @mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+}
+@mixin prev{
+    transform: translateX(50px);
+   -webkit-transform: translateX(50px);
+   -moz-transform: translateX(50px);
+   -ms-transform: translateX(50px);
+   -o-transform: translateX(50px);
+}
+  @mixin next{
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+}
+  @mixin translateX{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+@mixin opacity-transition($duration: 0.3s) {
+    transition: opacity $duration ease-in-out;
+    -webkit-transition: opacity $duration ease-in-out;
+    -moz-transition: opacity $duration ease-in-out;
+    -ms-transition: opacity $duration ease-in-out;
+    -o-transition: opacity $duration ease-in-out;
+    @content;
+}
